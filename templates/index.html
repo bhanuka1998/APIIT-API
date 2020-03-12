@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Musico</title>
+    <title>B & S</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -35,6 +35,46 @@
         <![endif]-->
 
     <!-- header-start -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+
+
+<script type=text/javascript>
+
+  $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+
+</script>
+
+
+
+<script type=text/javascript>
+
+  $(function() {
+
+    $('a#calculate').bind('click', function() {
+
+      $.getJSON($SCRIPT_ROOT + '/search', {
+
+        a: $('input[name="a"]').val()
+
+      }, function(data) {
+
+        $("#result").text(data.result.name);
+
+      });
+
+      return false;
+
+    });
+
+  });
+
+</script>
+
+
+
+
     <header>
         <div class="header-area ">
             <div id="sticky-header" class="main-header-area">
@@ -52,21 +92,21 @@
                                 <div class="main-menu  d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a class="active" href="index.html">home</a></li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="track.html">tracks</a></li>
-                                            <li><a href="#">blog <i class="ti-angle-down"></i></a>
+                                            <li><a class="active" href="/">home</a></li>
+                                            <li><a href="/about">About</a></li>
+                                            <li><a href="/track">tracks</a></li>
+                                            <li><a href="/blog">blog <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
-                                                    <li><a href="blog.html">blog</a></li>
-                                                    <li><a href="single-blog.html">single-blog</a></li>
+                                                    <li><a href="/blog">blog</a></li>
+                                                    <li><a href="/single-blog">single-blog</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="#">pages <i class="ti-angle-down"></i></a>
                                                 <ul class="submenu">
-                                                     <li><a href="elements.html">elements</a></li>
+                                                     <li><a href="/elements">elements</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="contact.html">Contact</a></li>
+                                            <li><a href="/contact">Contact</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -99,7 +139,7 @@
                 <div class="row">
                     <div class="col-xl-12">
                         <div class="slider_text text-center ">
-                            <h3> Musician </h3>
+                            <h3> B & S Official </h3>
                         </div>
                     </div>
                 </div>
@@ -178,14 +218,16 @@
                         <div class="hover_elements">
                             
                             <div class="video">
-                                <iframe id="ytplayer" type="text/html" width="270.8" height="270.8"
-                                src="https://www.youtube.com/embed/iIm4gcybpsI"
-                                frameborder="0"></iframe>
+                                <div class="video">
+                                    <iframe id="ytplayer" type="text/html" width="270.8" height="270.8"
+                                    src="https://www.youtube.com/embed/t1_zCeNMYDc"
+                                    frameborder="0"></iframe>
+                            </div>
                             </div>
 
                             <div class="hover_inner">
-                                <span>Ridma Weerawardena</span>
-                                <h3><a href="https://www.youtube.com/watch?v=iIm4gcybpsI">Kuweni</a></h3>
+                                <span>Bhathiya & Santhush</span>
+                                <h3>Saragi Asille<a href="https://www.youtube.com/watch?v=t1_zCeNMYDc"></a></h3>
                             </div>
                         </div>
                     </div>
@@ -198,13 +240,13 @@
                         <div class="hover_elements">
                             <div class="video">
                                 <iframe id="ytplayer" type="text/html" width="270.8" height="270.8"
-                                src="https://www.youtube.com/embed/ixnjDzxjey0"
+                                src="https://www.youtube.com/embed/k3_MPzW0Sos"
                                 frameborder="0"></iframe>
                             </div>
 
                             <div class="hover_inner">
-                                <span>Ridma Weerawardena</span>
-                                <h3><a href="https://www.youtube.com/watch?v=ixnjDzxjey0">Soyaa Awa</a></h3>
+                                <span>Bhathiya & Santhush</span>
+                                <h3><a href="https://www.youtube.com/watch?v=k3_MPzW0Sos">Hoiya (Dell Studio)</a></h3>
                             </div>
                         </div>
                     </div>
@@ -217,13 +259,13 @@
                         <div class="hover_elements">
                             <div class="video">
                                 <iframe id="ytplayer" type="text/html" width="270.8" height="270.8"
-                                src="https://www.youtube.com/embed/zv2SiwkJTAw"
+                                src="https://www.youtube.com/embed/z4sDFYBSfOQ"
                                 frameborder="0"></iframe>
                             </div>
 
                             <div class="hover_inner">
-                                <span>Ridma Weerawardena</span>
-                                <h3><a href="https://www.youtube.com/watch?v=zv2SiwkJTAw">Naadagam Geeya</a></h3>
+                                <span>Bhathiya & Santhush</span>
+                                <h3><a href="hhttps://www.youtube.com/watch?v=z4sDFYBSfOQ">Sebala Puthu</a></h3>
                             </div>
                         </div>
                     </div>
@@ -236,13 +278,13 @@
                         <div class="hover_elements">
                             <div class="video">
                                 <iframe id="ytplayer" type="text/html" width="270.8" height="270.8"
-                                src="https://www.youtube.com/embed/eM61Vfiq7as"
+                                src="https://www.youtube.com/embed/SEcvLP0haYQ"
                                 frameborder="0"></iframe>
                             </div>
 
                             <div class="hover_inner">
-                                <span>Ridma Weerawardena</span>
-                                <h3><a href="https://www.youtube.com/watch?v=eM61Vfiq7as">Sandawathiye</a></h3>
+                                <span>Bhathiya & Santhush</span>
+                                <h3><a href="https://www.youtube.com/watch?v=SEcvLP0haYQ">Roo Sara</a></h3>
                             </div>
                         </div>
                     </div>
@@ -268,78 +310,22 @@
                                 <div class="col-xl-9 col-md-9">
                                     <div class="music_field">
                                             <div class="thumb">
-                                                    <img src="static/img/music_man/1.png" alt="">
+                                                    <img src="static/img/music_man/img1.jpg" alt="" width="148px", height="148">
                                                 </div>
                                                 <div class="audio_name">
                                                     <div class="name">
-                                                        <h4>Frando Kally</h4>
-                                                        <p>10 November, 2019</p>
+                                                        <h4>Bhathiya & Santhush</h4>
+                                                        <p>Playlist</p>
                                                     </div>
-                                                    <iframe scrolling="no" frameborder="0" allowTransparency="true" 
-                                                    src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=ff0000&layout=dark&size=medium&type=tracks&id=1560273&app_id=1" 
-                                                    width="700" height="350"></iframe>
-                                                </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-md-3">
-                                    <div class="music_btn">
-                                            <a href="#" class="boxed-btn">buy albam</a>
-                                    </div>
-                                </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="row align-items-center justify-content-center mb-20">
-                <div class="col-xl-10">
-                    <div class="row align-items-center">
-                                <div class="col-xl-9 col-md-9">
-                                    <div class="music_field">
-                                            <div class="thumb">
-                                                    <img src="static/img/music_man/2.png" alt="">
+                                                    <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=700&height=350&color=ff0000&layout=&size=medium&type=album&id=7260475&app_id=1" width="700" height="350"></iframe>
                                                 </div>
                                                 <div class="audio_name">
                                                     <div class="name">
-                                                        <h4>Frando Kally</h4>
-                                                        <p>10 November, 2019</p>
+                                                        <h4>Bhathiya & Santhush</h4>
+                                                        <p>Fan made covers</p>
                                                     </div>
-                                                        <audio preload="auto" controls>
-                                                                <source src="https://www.w3schools.com/html/horse.mp3">
-                                                            </audio>
+                                                    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/576234474&color=%232b2c33&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
                                                 </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-md-3">
-                                    <div class="music_btn">
-                                            <a href="#" class="boxed-btn">buy albam</a>
-                                    </div>
-                                </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="row align-items-center justify-content-center mb-20">
-                <div class="col-xl-10">
-                    <div class="row align-items-center">
-                                <div class="col-xl-9 col-md-9">
-                                    <div class="music_field">
-                                            <div class="thumb">
-                                                    <img src="static/img/music_man/3.png" alt="">
-                                                </div>
-                                                <div class="audio_name">
-                                                    <div class="name">
-                                                        <h4>Frando Kally</h4>
-                                                        <p>10 November, 2019</p>
-                                                    </div>
-                                                        <audio preload="auto" controls>
-                                                                <source src="https://www.w3schools.com/html/horse.mp3">
-                                                            </audio>
-                                                </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-md-3">
-                                    <div class="music_btn">
-                                            <a href="#" class="boxed-btn">buy albam</a>
                                     </div>
                                 </div>
                     </div>
@@ -424,6 +410,13 @@
                 </div>
         </div>
     </div>
+
+    <h1> Search Song</h1>
+    <p><input type=text size=5 name=a>
+        <span id=result>?</span>
+
+        <p><a href=# id=calculate>Search Song</a></p>
+    </p>
     <!--/ gallery -->
 
     <!-- contact_rsvp -->
